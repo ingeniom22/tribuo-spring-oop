@@ -52,7 +52,7 @@
             <p th:text="${xgb.proba}" />
         </div>
 
-        <form action="@{/predict}">
+        <form th:action="@{/predict}">
             <div class="button">
                 <input type="submit" value="Create another prediction" />
             </div>
