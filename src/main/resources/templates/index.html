@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diabetes Prediction with XGBoost</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/icons.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/owl.theme.default.min.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/colordanfont.css}" rel="stylesheet" type="text/css">
+
+<body id="top">
+    <main>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+            <div class="container">
+                <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                    Diabetes Prediction with XGBoost
+                    <strong class="d-block">Algorithm data health Specialist</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#hero">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#timeline">Process</a>
+                        </li>
+
+                        <a class="navbar-brand d-none d-lg-block" href="index.html">
+                            Diabetes Prediction with XGBoost
+                            <strong class="d-block">Machine Learning Based Health Specialist</strong>
+                        </a>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#booking">Try it out!</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img th:src="@{images/slider/Gilang.jpg}" class="img-fluid" alt="">
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="heroText d-flex flex-column justify-content-center">
+
+                            <h1 class="mt-auto mb-2">
+                                Better
+                                <div class="animated-info">
+                                    <span class="animated-item">health</span>
+                                    <span class="animated-item">days</span>
+                                    <span class="animated-item">lives</span>
+                                </div>
+                            </h1>
+
+                            <p class="mb-4">Diabetes Prediction with XGBoost is an algorithm we made that can predict
+                                the level of confidence in diabetes through the application of integrated data using
+                                machine learning algorithms.</p>
+
+                            <div class="heroLinks d-flex flex-wrap align-items-center">
+                                <a class="custom-link me-4" href="#about" data-hover="Learn More">Learn More</a>
+
+                                <p class="contact-phone mb-0"><i class="bi-phone"></i> 0812-2282-4629</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="about">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h2 class="mb-lg-3 mb-3">Meet Dr. James and Dr. Gilang</h2>
+
+                        <p>Dr. James Michael Fritz and Dr. Bagus Gilang Rachmadi are the founders of this Machine
+                            Learning Algorithm.</p>
+                        <P>James Michael Fritz was a Telkom University Graduate, he achieved many accomplishments
+                            throughout the years of his college from being one of the Alumni that graduates with the
+                            title of Summa Cumlaude and being ranked top 3 on International programming competition with
+                            a tons of professional jobs experiences in his resume.</P>
+                        <p>Bagus Gilang Rachmadi was also a Telkom University Gradute and he was a classmate with James,
+                            after graduating from his college he created many businesses that ends up successfully as of
+                            right now. </p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                        <div
+                            class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+                            <img th:src="@{images/gallery/WhatsApp Image 2023-01-04 at 3.10.53 PM.jpeg}"
+                                class="img-fluid galleryImage">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                        <img th:src="@{images/gallery/sugondeez.jpeg}" alt="Image 1">
+                        <p class="mx-auto">State of the art algorithm</p>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                        <img th:src="@{images/gallery/sigma balls.jpeg}" alt="Image 2">
+                        <p class="mx-auto">High precision</p>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                        <img th:src="@{images/gallery/f1e.jpg}" alt="Image 3">
+                        <p class="mx-auto">On the cloud</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section-padding pb-0" id="timeline">
+            <div class="container">
+                <div class="row">
+
+                    <h2 class="text-center mb-lg-5 mb-4">Step by step</h2>
+
+                    <div class="timeline">
+                        <div
+                            class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                            <div
+                                class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class=" text-light">Click the button</h3>
+
+
+                                <p>First off, to begin calculating the diabetes prediction confidence level click the
+                                    start button below</p>
+                            </div>
+
+
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-patch-check-fill timeline-icon"></i>
+                            </div>
+
+                            <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+
+                            </div>
+                        </div>
+
+                        <div
+                            class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes my-lg-5 my-4">
+
+                            <div
+                                class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class=" text-light">Fill the form</h3>
+
+                                <p>On the next step, you need to fill all the question inside the form we provided with
+                                    your health data.</p>
+                            </div>
+
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-book timeline-icon"></i>
+                            </div>
+
+                            <div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 timeline-date">
+
+                            </div>
+                        </div>
+
+                        <div
+                            class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                            <div
+                                class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class=" text-light">Submit the form</h3>
+
+                                <p>After you fill all the question inside the form we provided, click the submit button
+                                    just below it</p>
+                            </div>
+
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-file-medical timeline-icon"></i>
+                            </div>
+
+                            <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+
+                            </div>
+                        </div>
+
+
+
+                        <div
+                            class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
+                            <div
+                                class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
+                                <h3 class=" text-light">See the results!</h3>
+
+                                <p>Lastly after you submit all the data in the form we provided, the confidence level on
+                                    your diabetes will show up</p>
+                            </div>
+
+                            <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
+                                <i class="bi-person timeline-icon"></i>
+                            </div>
+
+                            <div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 timeline-date">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding pb-0" id="reviews">
+            <div class="container">
+                <div class="row">
+
+
+        </section>
+
+        <section class="section-padding" id="booking">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <div class="booking-form">
+
+                            <h2 class="text-center mb-lg-3 mb-2">Calculate your diabetes confidence level</h2>
+
+                            <form role="form" action="/predict" method="get">
+                                <div class="row">
+
+
+                                    <div class="col-lg-3 col-md-4 col-6 mx-auto">
+                                        <button type="submit" class="form-control" id="submit-button">Start</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer section-padding" id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5 me-auto col-12">
+                    <h5 class="mb-lg-4 mb-3">More about Us</h5>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex">
+                            Our mission is to provide a simple need for health availability for those who can't afford
+                            to go to the clinic or hospital, hopefully many more kickstarter like us will do the same
+                        </li>
+
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
+                    <h5 class="mb-lg-4 mb-3">Our HQ</h5>
+
+                    <p><a href="mailto:hello@company.co">tubespbo@company.co</a>
+                    <p>
+
+                    <p>Jl. Sukapura no 420, Bojongsoang, Bandung 40621</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 ms-auto">
+                    <h5 class="mb-lg-4 mb-3">Socials</h5>
+
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                    <p class="copyright-text">Copyright ©
+                        Diabetes Prediction with XGBoost 2022
+
+                </div>
+
+            </div>
+            </section>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <h1>Result</h1>
+    <p th:text="'pregnancies: ' + ${request.pregnancies}" />
+    <p th:text="'glucose: ' + ${request.glucose}" />
+    <p th:text="'bloodPressure: ' + ${request.bloodPressure}" />
+    <p th:text="'skinThickness ' + ${request.skinThickness}" />
+    <p th:text="'insulin ' + ${request.insulin}" />
+    <p th:text="'bmi ' + ${request.bmi}" />
+    <p th:text="'diabetesPedigreeFunction: ' + ${request.diabetesPedigreeFunction}" />
+    <p th:text="'age: ' + ${request.age}" />
+    <p th:text="'result: ' + ${xgb.label}" />
+    <p th:text="'confidence: ' + ${xgb.proba}" />
+
+    <a href="/predict">Submit another message</a>
+</body>
+
+</html>

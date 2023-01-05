@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Diabetes Predictor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<div class="container">
+    <div class="title">Result</div>
+    <div class="title"></div>
+    <div class="user__details">
+        <div class="input__box">
+            <span class="details">Pregnancies (months)</span>
+            <p th:text="${request.pregnancies}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Glucose</span>
+            <p th:text="${request.glucose}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Blood pressure</span>
+            <p th:text="${request.bloodPressure}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Skin thickness</span>
+            <p th:text="${request.skinThickness}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Insulin</span>
+            <p th:text="${request.insulin}" />
+        </div>
+        <div class="input__box">
+            <span class="details">BMI</span>
+            <p th:text="${request.bmi}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Diabetes Pedigree Function</span>
+            <p th:text="${request.diabetesPedigreeFunction}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Age</span>
+            <p th:text="${request.age}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Result</span>
+            <p th:text="${xgb.label}" />
+        </div>
+        <div class="input__box">
+            <span class="details">Confidence</span>
+            <p th:text="${xgb.proba}" />
+        </div>
+
+        <form action="/predict">
+            <div class="button">
+                <input type="submit" value="Create another prediction" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Diabetes Predictor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+
+
+<div class="container">
+    <div class="title">Please fill out the form below</div>
+    <div class="title"></div>
+    <form action="#" th:action="@{/predict}" th:object="${request}" method="post">
+        <div class="user__details">
+            <div class="input__box">
+                <span class="details">Pregnancies rate</span>
+                <input type="text" th:field="*{pregnancies}" placeholder="" required />
+            </div>
+            <div class="input__box">
+                <span class="details">Glucose rate</span>
+                <input type="text" th:field="*{glucose}" placeholder="" required />
+            </div>
+
+            <div class="input__box">
+                <span class="details">Blood Pressure rate</span>
+                <input type="text" th:field="*{bloodPressure}" placeholder="" required />
+            </div>
+            <div class="input__box">
+                <span class="details">Skin Thickness</span>
+                <input type="text" th:field="*{skinThickness}" placeholder="" required />
+            </div>
+            <div class="input__box">
+                <span class="details">Insulin</span>
+                <input type="text" th:field="*{insulin}" placeholder="" required />
+            </div>
+            <div class="input__box">
+                <span class="details">BMI</span>
+                <input type="text" th:field="*{bmi}" placeholder="" required />
+            </div>
+            <div class="input__box">
+                <span class="details">Diabetes Pedigree Function rate</span>
+                <input type="text" th:field="*{diabetesPedigreeFunction}" placeholder="" required />
+            </div>
+            <div class="input__box">
+                <span class="details">Age</span>
+                <input type="text" th:field="*{age}" placeholder="" required />
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</div>
+
+</html>
