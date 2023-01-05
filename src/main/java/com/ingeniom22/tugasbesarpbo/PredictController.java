@@ -22,10 +22,10 @@ public class PredictController {
             throws FileNotFoundException, IOException {
         model.addAttribute("request", request);
 
-        XGBoostClassifier xgb = new XGBoostClassifier();
-        xgb.setPrediction(request);
+        DiabetesPredictionResult result = new DiabetesPredictionResult();
+        result.setPrediction(request);
 
-        model.addAttribute("xgb", xgb);
+        model.addAttribute("result", result);
         return "result2";
     }
 

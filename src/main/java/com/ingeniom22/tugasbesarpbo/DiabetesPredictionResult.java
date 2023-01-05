@@ -1,31 +1,58 @@
-// package com.ingeniom22.tugasbesarpbo;
+package com.ingeniom22.tugasbesarpbo;
 
-// /**
-// * DiabetesPredictionResult
-// */
-// public class DiabetesPredictionResult {
-// private String label;
-// private double proba;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
-// public DiabetesPredictionResult(byte label, double proba) {
-// this.label = label;
-// this.proba = proba;
-// }
+import org.tribuo.Example;
+import org.tribuo.Model;
+import org.tribuo.Prediction;
+import org.tribuo.classification.Label;
+import org.tribuo.classification.LabelFactory;
+import org.tribuo.impl.ArrayExample;
 
-// public byte getLabel() {
-// return label;
-// }
+public class DiabetesPredictionResult {
+    private static Model<Label> loadedModel;
+    private String label;
+    private double proba;
 
-// public void setLabel(byte label) {
-// this.label = label;
-// }
+    public void setPrediction(DiabetesPredictionRequest request) throws IOException {
+        try (ObjectInputStream ois = new ObjectInputStream(
+                new BufferedInputStream(new FileInputStream("diabetes-rf-model.se")))) {
+            loadedModel = (Model<Label>) ois.readObject();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
-// public double getProba() {
-// return proba;
-// }
+        Label outputPlaceHolder = LabelFactory.UNKNOWN_LABEL;
 
-// public void setProba(double proba) {
-// this.proba = proba;
-// }
+        Example<Label> example = new ArrayExample<>(
+                outputPlaceHolder,
+                DiabetesPredictionRequest.featureNames,
+                request.getFeatureValues());
 
-// }
+        Prediction<Label> prediction = loadedModel.predict(example);
+        Label result = prediction.getOutput();
+        this.label = result.getLabel();
+        this.proba = result.getScore();
+
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public double getProba() {
+        return proba;
+    }
+
+    public void setProba(double proba) {
+        this.proba = proba;
+    }
+
+}

@@ -45,11 +45,11 @@
         </div>
         <div class="input__box">
             <span class="details">Result</span>
-            <p th:text="${xgb.label}" />
+            <p th:text="${result.label}" />
         </div>
         <div class="input__box">
             <span class="details">Confidence</span>
-            <p th:text="${xgb.proba}" />
+            <p th:text="${result.proba}" />
         </div>
 
         <form th:action="@{/predict}">
