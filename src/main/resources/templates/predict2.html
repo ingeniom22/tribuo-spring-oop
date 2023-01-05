@@ -15,16 +15,16 @@
     <form action="#" th:action="@{/predict}" th:object="${request}" method="post">
         <div class="user__details">
             <div class="input__box">
-                <span class="details">Pregnancies rate</span>
+                <span class="details">Pregnancies (months))</span>
                 <input type="text" th:field="*{pregnancies}" placeholder="" required />
             </div>
             <div class="input__box">
-                <span class="details">Glucose rate</span>
+                <span class="details">Glucose</span>
                 <input type="text" th:field="*{glucose}" placeholder="" required />
             </div>
 
             <div class="input__box">
-                <span class="details">Blood Pressure rate</span>
+                <span class="details">Blood Pressure</span>
                 <input type="text" th:field="*{bloodPressure}" placeholder="" required />
             </div>
             <div class="input__box">
@@ -40,7 +40,7 @@
                 <input type="text" th:field="*{bmi}" placeholder="" required />
             </div>
             <div class="input__box">
-                <span class="details">Diabetes Pedigree Function rate</span>
+                <span class="details">Diabetes Pedigree Function</span>
                 <input type="text" th:field="*{diabetesPedigreeFunction}" placeholder="" required />
             </div>
             <div class="input__box">

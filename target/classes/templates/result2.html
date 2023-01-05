@@ -49,7 +49,7 @@
         </div>
         <div class="input__box">
             <span class="details">Confidence</span>
-            <p th:text="${result.proba}" />
+            <p th:text="${result.proba} + '%'" />
         </div>
 
         <form th:action="@{/predict}">

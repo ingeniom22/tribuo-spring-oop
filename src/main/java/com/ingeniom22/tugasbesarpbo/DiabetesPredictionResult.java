@@ -34,8 +34,14 @@ public class DiabetesPredictionResult {
 
         Prediction<Label> prediction = loadedModel.predict(example);
         Label result = prediction.getOutput();
-        this.label = result.getLabel();
-        this.proba = result.getScore();
+
+        if (result.getLabel().equals("1")) {
+            this.label = "Positive";
+        } else {
+            this.label = "Negative";
+        }
+        ;
+        this.proba = Math.round(result.getScore() * 100);
 
     }
 
